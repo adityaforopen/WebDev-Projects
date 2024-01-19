@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tags Example</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        button {
+            margin: 5px;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .code-box {
+            flex: 1;
+            margin-top: 20px;
+            border: 1px outset #aaa;
+            padding: 10px;
+            overflow: auto;
+            box-sizing: border-box;
+        }
+
+        .output-box {
+            flex: 1;
+            margin-top: 20px;
+            border: 1px outset #aaa;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        hr {
+            border: 10px inset black;
+            margin: 20px 20px;
+        }
+
+        .betweenButtons {
+            border: 5px double black;
+            margin: 0px 25%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="code-box" id="codeBox"></div>
+        <div class="output-box" id="outputBox"></div>
+    </div>
+
+    <div class="container">
+        <button onclick="showCodeExample('h1')">Show Example h1</button>
+        <button onclick="showCodeExample('h2')">Show Example h2</button>
+        <button onclick="showCodeExample('h3')">Show Example h3</button>
+        <button onclick="showCodeExample('h4')">Show Example h4</button>
+        <button onclick="showCodeExample('h5')">Show Example h5</button>
+        <button onclick="showCodeExample('h6')">Show Example h6</button>
+    </div>
+
+    <hr class="betweenButtons">
+
+    <div class="container">
+        <button onclick="showCodeExample('p')">Show Example p</button>
+        <button onclick="showCodeExample('pre')">Show Example pre</button>
+        <button onclick="showCodeExample('br')">Show Example br</button>
+        <button onclick="showCodeExample('hr')">Show Example hr</button>
+    </div>
+
+    <hr class="betweenButtons"/>
+
+    <script>
+        function showCodeExample(tagName) {
+            var codeBox = document.getElementById('codeBox');
+            var outputBox = document.getElementById('outputBox');
+            var exampleCode = '';
+
+            switch (tagName) {
+                case 'h1':
+                case 'h2':
+                case 'h3':
+                case 'h4':
+                case 'h5':
+                case 'h6':
+                    exampleCode = '<' + tagName + '>This is a ' + tagName.toUpperCase() + ' Heading</' + tagName + '>\n' +
+                                    '<p>This is some text under the ' + tagName.toUpperCase() + ' heading.</p>';
+                    break;
+
+                case 'p':
+                    exampleCode = '<p>This is a paragraph.</p>';
+                    break;
+
+                case 'pre':
+                    exampleCode = '<pre>\n    This is preformatted text.\n    It preserves both spaces and\n    line breaks.</pre>';
+                    break;
+
+                case 'br':
+                    exampleCode = 'This is a line of text.<br>This is a new line of text.';
+                    break;
+
+                case 'hr':
+                    exampleCode = '<p>This is some content above the horizontal rule.</p>\n<hr>\n<p>This is some content below the horizontal rule.</p>';
+                    break;
+            }
+
+            codeBox.innerText = exampleCode;
+            outputBox.innerHTML = exampleCode;
+        }
+    </script>
+
+    <hr>
+    
+
+</body>
+</html>
