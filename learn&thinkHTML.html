@@ -4,120 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Tags Example</title>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-
-        .container {
-            display: flex;
-            flex-wrap: wrap;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        button {
-            margin: 5px;
-            padding: 8px 12px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .code-box {
-            flex: 1;
-            margin-top: 20px;
-            border: 1px outset #aaa;
-            padding: 10px;
-            overflow: auto;
-            box-sizing: border-box;
-        }
-
-        .output-box {
-            flex: 1;
-            margin-top: 20px;
-            border: 1px outset #aaa;
-            padding: 10px;
-            box-sizing: border-box;
-        }
-
-        hr {
-            border: 10px inset black;
-            margin: 20px 20px;
-        }
-
-        .betweenButtons {
-            border: 5px double black;
-            margin: 0px 25%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <h3>Headings</h3>
+
     <div class="container">
-        <div class="code-box" id="codeBox"></div>
-        <div class="output-box" id="outputBox"></div>
+        <div class="code-box" id="codeBox1"></div>
+        <div class="output-box" id="outputBox1"></div>
     </div>
 
     <div class="container">
-        <button onclick="showCodeExample('h1')">Show Example h1</button>
-        <button onclick="showCodeExample('h2')">Show Example h2</button>
-        <button onclick="showCodeExample('h3')">Show Example h3</button>
-        <button onclick="showCodeExample('h4')">Show Example h4</button>
-        <button onclick="showCodeExample('h5')">Show Example h5</button>
-        <button onclick="showCodeExample('h6')">Show Example h6</button>
+        <button onclick="showCodeExample('h1', 1)">Show Example h1</button>
+        <button onclick="showCodeExample('h2', 1)">Show Example h2</button>
+        <button onclick="showCodeExample('h3', 1)">Show Example h3</button>
+        <button onclick="showCodeExample('h4', 1)">Show Example h4</button>
+        <button onclick="showCodeExample('h5', 1)">Show Example h5</button>
+        <button onclick="showCodeExample('h6', 1)">Show Example h6</button>
     </div>
 
     <hr class="betweenButtons">
 
+    <h3>Paragraphs</h3>
+
     <div class="container">
-        <button onclick="showCodeExample('p')">Show Example p</button>
-        <button onclick="showCodeExample('pre')">Show Example pre</button>
-        <button onclick="showCodeExample('br')">Show Example br</button>
-        <button onclick="showCodeExample('hr')">Show Example hr</button>
+        <div class="code-box" id="codeBox2"></div>
+        <div class="output-box" id="outputBox2"></div>
+    </div>
+
+    <div class="container">
+        <button onclick="showCodeExample('p', 2)">Show Example p</button>
+        <button onclick="showCodeExample('pre', 2)">Show Example pre</button>
+        <button onclick="showCodeExample('br', 2)">Show Example br</button>
+        <button onclick="showCodeExample('hr', 2)">Show Example hr</button>
     </div>
 
     <hr class="betweenButtons"/>
 
-    <script>
-        function showCodeExample(tagName) {
-            var codeBox = document.getElementById('codeBox');
-            var outputBox = document.getElementById('outputBox');
-            var exampleCode = '';
+    <h3>Formatting</h3>
 
-            switch (tagName) {
-                case 'h1':
-                case 'h2':
-                case 'h3':
-                case 'h4':
-                case 'h5':
-                case 'h6':
-                    exampleCode = '<' + tagName + '>This is a ' + tagName.toUpperCase() + ' Heading</' + tagName + '>\n' +
-                                    '<p>This is some text under the ' + tagName.toUpperCase() + ' heading.</p>';
-                    break;
+    <div class="container">
+        <div class="code-box" id="codeBox3"></div>
+        <div class="output-box" id="outputBox3"></div>
+    </div>
 
-                case 'p':
-                    exampleCode = '<p>This is a paragraph.</p>';
-                    break;
+    <div class="container">
+        <button onclick="showCodeExample('b', 3)">Show Example b</button>
+        <button onclick="showCodeExample('strong', 3)">Show Example strong</button>
+        <button onclick="showCodeExample('i', 3)">Show Example i</button>
+        <button onclick="showCodeExample('em', 3)">Show Example em</button>
+        <button onclick="showCodeExample('mark', 3)">Show Example mark</button>
+        <button onclick="showCodeExample('small', 3)">Show Example small</button>
+        <button onclick="showCodeExample('del', 3)">Show Example del</button>
+        <button onclick="showCodeExample('ins', 3)">Show Example ins</button>
+        <button onclick="showCodeExample('sub', 3)">Show Example sub</button>
+        <button onclick="showCodeExample('sup', 3)">Show Example sup</button>
+    </div>
 
-                case 'pre':
-                    exampleCode = '<pre>\n    This is preformatted text.\n    It preserves both spaces and\n    line breaks.</pre>';
-                    break;
+    <hr class="betweenButtons">
 
-                case 'br':
-                    exampleCode = 'This is a line of text.<br>This is a new line of text.';
-                    break;
+    <h3>Quotations and Citation Elements</h3>
 
-                case 'hr':
-                    exampleCode = '<p>This is some content above the horizontal rule.</p>\n<hr>\n<p>This is some content below the horizontal rule.</p>';
-                    break;
-            }
+    <div class="container">
+        <div class="code-box" id="codeBox4"></div>
+        <div class="output-box" id="outputBox4"></div>
+    </div>
 
-            codeBox.innerText = exampleCode;
-            outputBox.innerHTML = exampleCode;
-        }
-    </script>
+    <div class="container">
+        <button onclick="showCodeExample('blockquote', 4)">Show Example blockquote</button>
+        <button onclick="showCodeExample('q', 4)">Show Example q</button>
+        <button onclick="showCodeExample('abbr', 4)">Show Example abbr</button>
+        <button onclick="showCodeExample('address', 4)">Show Example address</button>
+        <button onclick="showCodeExample('cite', 4)">Show Example cite</button>
+        <button onclick="showCodeExample('bdo', 4)">Show Example bdo</button>
+    </div>
+
+    <h3>CSS Colors</h3>
+
+    <h5>RGBA Values</h5>
+
+    <div class="toggle-container">
+        <div class="color-box" id="colorBox"></div>
+        <button class="toggleButton" onclick="toggleColor('red')">Toggle Red</button>
+        <button class="toggleButton" onclick="toggleColor('green')">Toggle Green</button>
+        <button class="toggleButton" onclick="toggleColor('blue')">Toggle Blue</button>
+        <button class="toggleButton" onclick="toggleOpacity()">Toggle Opacity</button>
+    </div>
+
+    <script src="myScript.js"></script>
 
     <hr>
     

@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #e2dfdf;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+
+}
+
+h3 {
+    text-align: center;
+    background-color: #aaa;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.code-box,
+.output-box {
+    display: none;
+    flex: 1;
+    margin-top: 20px;
+    border: 1px outset #aaa;
+    overflow: auto;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+hr {
+    border: 10px inset black;
+    margin: 20px 20px;
+}
+
+.betweenButtons {
+    border: 5px double black;
+    margin: 0px 25%;
+}
+
+/* Color Box Section*/
+.toggle-container {
+    max-width: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+.color-box {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease-in-out;
+}
+
+.toggleButton {
+    margin: 5px;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
